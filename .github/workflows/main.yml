@@ -15,3 +15,13 @@ jobs:
           echo '${{ secrets.CYPRESS_ENV_CI }}' > cypress.env.json
       - name: Cypress run
         uses: cypress-io/github-action@v4.2.2
+      - name: Archive mocha awesome result
+        uses: actions/upload-artifact@v3
+        with:
+          name: mocha-test-reports
+          path: test-results/*
+      - name: Archive results
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-results
+          path: e2e/results/*
