@@ -3,8 +3,8 @@ const { defineConfig } = require('cypress')
 module.exports = defineConfig({
   fileServerFolder: 'e2e',
   fixturesFolder: false,
-  screenshotsFolder: 'e2e/results/html/assets/screenshots',
-  videosFolder: 'e2e/results/html/assets/videos',
+  screenshotsFolder: 'e2e/results/screenshots',
+  videosFolder: 'e2e/results/videos',
   reporter: 'cypress-multi-reporters',
   reporterOptions: {
     configFile: 'e2e/reporter.json',
