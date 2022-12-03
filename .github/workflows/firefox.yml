@@ -4,16 +4,17 @@ on: [push]
 
 jobs:
   cypress-run:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     name: E2E on Firefox
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v4.2.2 # use the explicit version number
         with:
+          command: cypress run --config-file cypress-e2e.config.js
           browser: firefox
         env: 
           user: ${{ secrets.USER }}
