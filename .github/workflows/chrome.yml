@@ -18,3 +18,8 @@ jobs:
         uses: cypress-io/github-action@v4.2.2
         with:
           browser: chrome
+      - name: Archive mocha awesome result
+        uses: actions/upload-artifact@v3
+        with:
+          name: mocha-test-report
+          path: test-results/*
