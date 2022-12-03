@@ -12,6 +12,8 @@ jobs:
       # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v4.2.2 # use the explicit version number
+        with:
+          env: true
         env: 
           user: ${{ secrets.USER }}
           password: ${{ secrets.PASSWORD }}
