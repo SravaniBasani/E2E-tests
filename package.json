@@ -3,10 +3,10 @@
     "version": "1.0.0",
     "description": "cypress E2E tests for service hub",
     "scripts": {
-        "run:e2e": "cypress run --config-file cypress-e2e.config.js",
-        "run:chrome:e2e": "cypress run --config-file cypress-e2e.config.js --browser chrome",
-        "run:firefox:e2e": "cypress run --config-file cypress-e2e.config.js --browser firefox",
-        "open:e2e": "cypress open --config-file cypress-e2e.config.js"
+        "run:e2e": "cypress run",
+        "run:chrome:e2e": "cypress run --browser chrome",
+        "run:firefox:e2e": "cypress run --browser firefox",
+        "open:e2e": "cypress open"
     },
     "repository": {
         "type": "git",
