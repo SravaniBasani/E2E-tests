@@ -1,0 +1,8 @@
+/node_modules
+/test-results
+/junit-reports
+/e2e/results
+.DS_Store
+.vscode
+.idea
+cypress.env.json

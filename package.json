@@ -1,0 +1,22 @@
+{
+    "name": "e2e-tests",
+    "version": "1.0.0",
+    "description": "cypress E2E tests for service hub",
+    "scripts": {
+        "run:e2e": "cypress run --config-file cypress-e2e.config.js",
+        "run:chrome:e2e": "cypress run --config-file cypress-e2e.config.js --browser chrome",
+        "run:firefox:e2e": "cypress run --config-file cypress-e2e.config.js --browser firefox",
+        "open:e2e": "cypress open --config-file cypress-e2e.config.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/SravaniBasani/E2E-tests.git"
+    },
+    "devDependencies": {
+        "cypress": "^11.2.0",
+        "uuid": "^9.0.0",
+        "cypress-multi-reporters": "^1.6.1",
+        "mocha-junit-reporter": "^2.2.0",
+        "mochawesome": "^7.1.3"
+    }
+}
