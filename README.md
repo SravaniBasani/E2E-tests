@@ -30,13 +30,19 @@ npx cypress run  --spec "path-to-test-file"
 
 Example: `npx cypress run  --spec "e2e/tests/create_service_version.cy.js"`
 
-# Debugging in local
-1. The videos and screenshots of test execution are stored in the e2e/results folder
+# Debugging
+## Local
+1. The videos and screenshots of failed test execution are stored in the e2e/results folder
 2. The test results are stored in the test-results folder
 3. The reports are stored in junit-reports folder
 
+## CI/CD
+1. The screenshots and video of the test execution will be available to download in the Artifacts section of the job.
+2. The mocha test reports should be available to download in the Artifcats section of the job.
+
 # Limitations
-The tests run only against the US region of the service hub
+1. The tests run only against the US region of the service hub
+2. The cypress video and screenshot doesn't seem to work in firefox
 
 # Planned improvements / Tech Debt
 1. Configure tests to run in parallel

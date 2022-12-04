@@ -48,10 +48,6 @@ describe("Create Service", () => {
 		//verifying if the details are correct on the newly created service overview page
 		cy.url().should("include", "/overview");
 		cy.getDataTestId("title-service").should("have.text", VALID_DISPLAY_NAME);
-
-		//verifying if the newly created service is in the list of services on service hub
-		cy.visit("/servicehub");
-		cy.get(`[data-testid=service-card-${VALID_DISPLAY_NAME}]`).should("exist");
 	});
 
 });

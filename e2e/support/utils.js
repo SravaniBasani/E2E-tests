@@ -25,7 +25,8 @@ export function login() {
 	const USER = Cypress.env("user");
   const PASSWORD = Cypress.env("password");
 
-  cy.enterEmail(USER);
+  cy.url().should("include", "/login");
+	cy.enterEmail(USER);
   cy.enterPassword(PASSWORD);
   cy.clickSubmit();
 
